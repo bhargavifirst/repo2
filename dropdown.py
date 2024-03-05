@@ -1,19 +1,23 @@
 import time
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import Select
-import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-driver=webdriver.firefox()
+
+driver = webdriver.Chrome()
 time.sleep(3)
 driver.get("https://www.amazon.in/mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles")
 time.sleep(3)
 driver.maximize_window()
 ele = driver.find_element(By.ID,"searchDropdownBox")
 time.sleep(3)
+
 drp = Select(ele)#we have to pass element as a parameter
-drp.select_by_visible_text("Baby")
+for i in drp.options:
+
+
+    drp.select_by_visible_text(i.text)
+
 time.sleep(3)
 
 driver.find_element(By.ID,"nav-search-submit-button").click()
