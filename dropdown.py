@@ -8,6 +8,11 @@ driver = webdriver.Chrome()
 time.sleep(3)
 driver.get("https://www.amazon.in/mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles")
 time.sleep(3)
+str = driver.current_url
+print("url" + str)
+a="sahiti"
+b="aashvi"
+print(a+b)
 driver.maximize_window()
 ele = driver.find_element(By.ID,"searchDropdownBox")
 time.sleep(3)
