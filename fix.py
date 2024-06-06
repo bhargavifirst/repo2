@@ -1,7 +1,7 @@
 import pytest
 @pytest.fixture()
 def name():
-    s = ("N.bbhargavi", "chandana")
+    s = ("N.bbhargavi ", "chandana")
     return s
 def test_a(name):
     l=len(name)
