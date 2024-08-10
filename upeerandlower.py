@@ -3,7 +3,7 @@ class UpperLower:
          upper =[]
          lower = []
          for i in a:
-             if i.islower():
+             if i.isupper():
                  upper.append(i)
              else:
                  lower.append(i)
